@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - GSAP + Barba.js 스타터킷</title>
+    <link rel="stylesheet" href="/src/styles/main.css" />
+  </head>
+  <body>
+    <!-- 네비게이션 -->
+    <nav class="nav">
+      <div class="nav__inner">
+        <a href="/" class="nav__logo">SmoothKit</a>
+        <ul class="nav__links">
+          <li><a href="/" class="nav__link">Home</a></li>
+          <li><a href="/about.html" class="nav__link">About</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Barba.js 래퍼 -->
+    <div data-barba="wrapper">
+      <!-- ScrollSmoother 래퍼 -->
+      <div id="smooth-wrapper">
+        <div id="smooth-content">
+          <!-- 페이지 컨테이너 -->
+          <main data-barba="container" data-barba-namespace="about">
+            <!-- 히어로 섹션 -->
+            <section class="hero" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+              <div class="container">
+                <h1 data-text-animate="chars">About</h1>
+                <p data-animate="fade">
+                  이 스타터킷의 구조와 사용 방법을 알아보세요.
+                </p>
+              </div>
+            </section>
+
+            <!-- 사용 방법 섹션 -->
+            <section>
+              <div class="container">
+                <h2 class="text-center" data-text-animate="words">사용 방법</h2>
+                <div class="cards mt-4" data-animate="stagger">
+                  <div class="card">
+                    <h3>1. 애니메이션 속성 추가</h3>
+                    <p>
+                      HTML 요소에 <code>data-animate</code> 또는 <code>data-text-animate</code>
+                      속성을 추가하면 자동으로 애니메이션이 적용됩니다.
+                    </p>
+                  </div>
+                  <div class="card">
+                    <h3>2. 유틸리티 함수 사용</h3>
+                    <p>
+                      JavaScript에서 직접 <code>fadeIn()</code>, <code>charsReveal()</code> 등의
+                      함수를 호출하여 세밀한 제어가 가능합니다.
+                    </p>
+                  </div>
+                  <div class="card">
+                    <h3>3. 페이지 전환</h3>
+                    <p>
+                      Barba.js가 자동으로 페이지 전환을 처리합니다. 일반 링크만 사용하면 됩니다.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- 애니메이션 옵션 섹션 -->
+            <section class="section--dark">
+              <div class="container">
+                <h2 data-text-animate="lines">애니메이션 옵션</h2>
+                <div class="mt-4">
+                  <div data-animate="fade" class="mt-2">
+                    <h3>스크롤 애니메이션 (data-animate)</h3>
+                    <ul style="list-style: disc; margin-left: 2rem; margin-top: 1rem;">
+                      <li><code>fade</code> - 페이드 인</li>
+                      <li><code>slide-left</code> - 왼쪽에서 슬라이드</li>
+                      <li><code>slide-right</code> - 오른쪽에서 슬라이드</li>
+                      <li><code>scale</code> - 스케일 업</li>
+                      <li><code>stagger</code> - 자식 요소 순차 등장</li>
+                    </ul>
+                  </div>
+                  <div data-animate="fade" class="mt-4">
+                    <h3>텍스트 애니메이션 (data-text-animate)</h3>
+                    <ul style="list-style: disc; margin-left: 2rem; margin-top: 1rem;">
+                      <li><code>chars</code> - 글자별 등장</li>
+                      <li><code>words</code> - 단어별 등장</li>
+                      <li><code>lines</code> - 줄별 등장</li>
+                      <li><code>typewriter</code> - 타이핑 효과</li>
+                      <li><code>scatter</code> - 흩어짐 효과</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- 파일 구조 섹션 -->
+            <section>
+              <div class="container">
+                <h2 class="text-center" data-animate="scale">프로젝트 구조</h2>
+                <div data-animate="fade" class="mt-4" style="background: #1a1a2e; color: #f8f9fa; padding: 2rem; border-radius: 16px; font-family: monospace; white-space: pre; overflow-x: auto;">
+src/
+├── main.js           # 진입점
+├── core/
+│   ├── gsap.js       # GSAP 설정
+│   └── barba.js      # Barba.js 설정
+├── animations/
+│   ├── smoother.js   # ScrollSmoother
+│   ├── scroll.js     # ScrollTrigger 유틸
+│   └── text.js       # SplitText 유틸
+└── styles/
+    └── main.css      # 스타일</div>
+              </div>
+            </section>
+
+            <!-- CTA 섹션 -->
+            <section class="section--dark text-center">
+              <div class="container">
+                <h2 data-text-animate="chars">시작하기</h2>
+                <p data-animate="fade" class="mt-2">
+                  홈 페이지로 돌아가서 더 많은 애니메이션 예제를 확인하세요.
+                </p>
+                <div class="mt-4" data-animate="scale">
+                  <a href="/" class="btn btn--outline">홈으로 돌아가기</a>
+                </div>
+              </div>
+            </section>
+
+            <!-- 푸터 -->
+            <footer class="footer">
+              <div class="container">
+                <p>GSAP + Barba.js 스타터킷 &copy; 2024</p>
+              </div>
+            </footer>
+          </main>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

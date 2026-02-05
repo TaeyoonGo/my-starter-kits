@@ -1,0 +1,20 @@
+{
+  "name": "smooth-transition-kit",
+  "version": "1.0.0",
+  "description": "GSAP + Barba.js 스타터킷 - 부드러운 페이지 전환과 스크롤 애니메이션",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@barba/core": "^2.10.3",
+    "gsap": "^3.14.2"
+  },
+  "devDependencies": {
+    "vite": "^7.3.1"
+  }
+}

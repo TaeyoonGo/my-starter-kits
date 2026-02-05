@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GSAP + Barba.js 스타터킷</title>
+    <link rel="stylesheet" href="/src/styles/main.css" />
+  </head>
+  <body>
+    <!-- 네비게이션 -->
+    <nav class="nav">
+      <div class="nav__inner">
+        <a href="/" class="nav__logo">SmoothKit</a>
+        <ul class="nav__links">
+          <li><a href="/" class="nav__link">Home</a></li>
+          <li><a href="/about.html" class="nav__link">About</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Barba.js 래퍼 -->
+    <div data-barba="wrapper">
+      <!-- ScrollSmoother 래퍼 -->
+      <div id="smooth-wrapper">
+        <div id="smooth-content">
+          <!-- 페이지 컨테이너 -->
+          <main data-barba="container" data-barba-namespace="home">
+            <!-- 히어로 섹션 -->
+            <section class="hero">
+              <div class="container">
+                <h1 data-text-animate="chars">부드러운 웹 경험</h1>
+                <p data-animate="fade">
+                  GSAP과 Barba.js로 구현한 스타터킷입니다. 스크롤 애니메이션, 페이지 전환, 텍스트
+                  효과를 쉽게 적용할 수 있습니다.
+                </p>
+                <div class="mt-2">
+                  <a href="/about.html" class="btn btn--outline">더 알아보기</a>
+                </div>
+              </div>
+            </section>
+
+            <!-- 기능 소개 섹션 -->
+            <section>
+              <div class="container">
+                <h2 class="text-center" data-text-animate="words">주요 기능</h2>
+                <div class="cards" data-animate="stagger">
+                  <div class="card">
+                    <h3>ScrollSmoother</h3>
+                    <p>부드러운 스크롤과 패럴랙스 효과로 자연스러운 스크롤 경험을 제공합니다.</p>
+                  </div>
+                  <div class="card">
+                    <h3>ScrollTrigger</h3>
+                    <p>
+                      스크롤 위치에 따른 애니메이션을 쉽게 구현할 수 있습니다. 다양한 트리거 옵션을
+                      지원합니다.
+                    </p>
+                  </div>
+                  <div class="card">
+                    <h3>SplitText</h3>
+                    <p>
+                      텍스트를 글자, 단어, 줄 단위로 분할하여 인상적인 텍스트 애니메이션을
+                      만듭니다.
+                    </p>
+                  </div>
+                  <div class="card">
+                    <h3>Barba.js</h3>
+                    <p>
+                      페이지 간 부드러운 전환 효과로 SPA와 같은 사용자 경험을 제공합니다.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- 스크롤 애니메이션 데모 섹션 -->
+            <section class="section--dark">
+              <div class="container">
+                <h2 data-text-animate="lines">스크롤 애니메이션</h2>
+                <p data-animate="fade">
+                  아래로 스크롤하면서 다양한 애니메이션 효과를 확인해보세요. data-animate 속성만
+                  추가하면 자동으로 애니메이션이 적용됩니다.
+                </p>
+              </div>
+            </section>
+
+            <!-- 좌우 슬라이드 데모 -->
+            <section>
+              <div class="container">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+                  <div data-animate="slide-left">
+                    <h3>왼쪽에서 슬라이드</h3>
+                    <p>
+                      slide-left 애니메이션은 요소가 왼쪽에서 페이드인되며 나타납니다. 콘텐츠를
+                      시각적으로 구분할 때 효과적입니다.
+                    </p>
+                  </div>
+                  <div data-animate="slide-right">
+                    <h3>오른쪽에서 슬라이드</h3>
+                    <p>
+                      slide-right 애니메이션은 반대 방향에서 나타납니다. 좌우 대칭 레이아웃에 잘
+                      어울립니다.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- 스케일 애니메이션 데모 -->
+            <section class="section--dark">
+              <div class="container text-center">
+                <div data-animate="scale">
+                  <h2>스케일 애니메이션</h2>
+                  <p>
+                    요소가 작은 크기에서 원래 크기로 확대되며 나타납니다. 중요한 콘텐츠를 강조할
+                    때 사용하세요.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <!-- 텍스트 애니메이션 데모 -->
+            <section>
+              <div class="container text-center">
+                <h2 data-text-animate="scatter">텍스트 애니메이션</h2>
+                <p class="mt-2">
+                  위 제목은 글자가 흩어졌다가 모이는 scatter 효과가 적용되어 있습니다.
+                </p>
+                <p data-text-animate="typewriter" class="mt-4" style="font-family: monospace; font-size: 1.5rem;">
+                  이것은 타이핑 효과입니다.
+                </p>
+              </div>
+            </section>
+
+            <!-- 푸터 -->
+            <footer class="footer">
+              <div class="container">
+                <p>GSAP + Barba.js 스타터킷 &copy; 2024</p>
+              </div>
+            </footer>
+          </main>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
