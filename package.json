@@ -1,0 +1,23 @@
+{
+  "name": "my-starter-kits",
+  "version": "1.0.0",
+  "private": true,
+  "description": "클로드 코드 스타터킷 모음",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspaces --if-present",
+    "build": "npm run build --workspaces --if-present"
+  },
+  "keywords": [
+    "starter-kit",
+    "claude-code",
+    "monorepo"
+  ],
+  "author": "",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}
